@@ -16,12 +16,12 @@ async def on_ready():
 
 @bot.event 
 async def on_member_join(member):
-    channel=bot.get_channel(997397603996160071)
+    channel=bot.get_channel( int(setdata['WELCOME_CHANNEL']) )
     await channel.send(f'{member} join!')
 
 @bot.event
 async def on_member_leave(member):
-    channel=bot.get_channel(997397603996160071)
+    channel=bot.get_channel( int(setdata['LEAVE_CHANNEL']) )
     await channel.send(f'{member} leave!')
 
 @bot.command()
